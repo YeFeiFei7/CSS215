@@ -1,33 +1,18 @@
-package stack_queue;
-
+package heap;
 
 public class Test {
     public static void main(String[] args) {
-        System.out.println("===Test for Stack===");
-        MyStack stack = new MyStack();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-
-        System.out.println("size: " + stack.getSize());
-        while (!stack.isEmpty()) {
-            System.out.print(stack.pop() + " ");
+        MyHeap heap = new MyHeap();
+        heap.add(3);
+        heap.add(5);
+        heap.add(1);
+        heap.add(4);
+        heap.add(2);
+        System.out.println("size: " + heap.getSize());
+        while (!heap.isEmpty()) {
+            System.out.print(heap.poll() + " ");
         }
-        System.out.println("\nsize: " + stack.getSize());
-
-
-        System.out.println("\n===Test for Queue===");
-        MyQueue queue = new MyQueue();
-        queue.add(1);
-        queue.add(2);
-        queue.add(3);
-        queue.add(4);
-
-        System.out.println("size: " + queue.getSize());
-        while(!queue.isEmpty()) {
-            System.out.print(queue.poll() + " ");
-        }
-        System.out.println("\nsize: " + queue.getSize());
+        System.out.println();
+        System.out.println("size: " + heap.getSize());
     }
 }
